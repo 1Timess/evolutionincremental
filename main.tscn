@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://wt3e7voel1l5"]
+[gd_scene format=3 uid="uid://wt3e7voel1l5"]
 
-[ext_resource type="Script" path="res://scripts/era_one.gd" id="1_era"]
-[ext_resource type="Script" path="res://scripts/cell_field.gd" id="2_cells"]
+[ext_resource type="Script" uid="uid://bm1amoc07bc6g" path="res://scripts/era_one.gd" id="1_era"]
+[ext_resource type="Script" uid="uid://bxfh2qkcenswp" path="res://scripts/cell_field.gd" id="2_cells"]
 
-[node name="EraOne" type="Control"]
+[node name="EraOne" type="Control" unique_id=1821672306]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,7 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_era")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=60879400]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,7 +21,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.018, 0.055, 0.075, 1)
 
-[node name="Margin" type="MarginContainer" parent="."]
+[node name="Margin" type="MarginContainer" parent="." unique_id=1982320838]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -33,50 +33,50 @@ offset_bottom = -24.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Layout" type="VBoxContainer" parent="Margin"]
+[node name="Layout" type="VBoxContainer" parent="Margin" unique_id=620420248]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="Header" type="HBoxContainer" parent="Margin/Layout"]
+[node name="Header" type="HBoxContainer" parent="Margin/Layout" unique_id=1016999797]
 layout_mode = 2
 
-[node name="TitleBlock" type="VBoxContainer" parent="Margin/Layout/Header"]
+[node name="TitleBlock" type="VBoxContainer" parent="Margin/Layout/Header" unique_id=1599650827]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="EraLabel" type="Label" parent="Margin/Layout/Header/TitleBlock"]
+[node name="EraLabel" type="Label" parent="Margin/Layout/Header/TitleBlock" unique_id=1170609272]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.47, 0.93, 0.76, 1)
 theme_override_font_sizes/font_size = 14
 text = "ERA I  •  UNICELLULAR LIFE"
 
-[node name="EnergyLabel" type="Label" parent="Margin/Layout/Header/TitleBlock"]
+[node name="EnergyLabel" type="Label" parent="Margin/Layout/Header/TitleBlock" unique_id=1234645405]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "0 Energy"
 
-[node name="EnergyRateLabel" type="Label" parent="Margin/Layout/Header/TitleBlock"]
+[node name="EnergyRateLabel" type="Label" parent="Margin/Layout/Header/TitleBlock" unique_id=322471266]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.65, 0.74, 0.78, 1)
 text = "+1.0 / sec"
 
-[node name="PopulationLabel" type="Label" parent="Margin/Layout/Header"]
+[node name="PopulationLabel" type="Label" parent="Margin/Layout/Header" unique_id=1740464661]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
 text = "Population  1"
 
-[node name="WorldPanel" type="PanelContainer" parent="Margin/Layout"]
+[node name="WorldPanel" type="PanelContainer" parent="Margin/Layout" unique_id=1120937647]
 custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="World" type="Control" parent="Margin/Layout/WorldPanel"]
+[node name="World" type="Control" parent="Margin/Layout/WorldPanel" unique_id=324495953]
 layout_mode = 2
 
-[node name="Water" type="ColorRect" parent="Margin/Layout/WorldPanel/World"]
+[node name="Water" type="ColorRect" parent="Margin/Layout/WorldPanel/World" unique_id=851093028]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -85,7 +85,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.025, 0.18, 0.23, 1)
 
-[node name="HabitatShade" type="ColorRect" parent="Margin/Layout/WorldPanel/World"]
+[node name="HabitatShade" type="ColorRect" parent="Margin/Layout/WorldPanel/World" unique_id=473850195]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -94,7 +94,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.01, 0.025, 0.035, 0.58)
 
-[node name="HabitatFill" type="ColorRect" parent="Margin/Layout/WorldPanel/World"]
+[node name="HabitatFill" type="ColorRect" parent="Margin/Layout/WorldPanel/World" unique_id=1609613645]
 unique_name_in_owner = true
 layout_mode = 0
 offset_right = 50.0
@@ -102,7 +102,7 @@ offset_bottom = 300.0
 mouse_filter = 2
 color = Color(0.08, 0.34, 0.34, 0.55)
 
-[node name="CellField" type="Control" parent="Margin/Layout/WorldPanel/World"]
+[node name="CellField" type="Control" parent="Margin/Layout/WorldPanel/World" unique_id=2069144646]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -113,7 +113,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("2_cells")
 
-[node name="HabitatLabel" type="Label" parent="Margin/Layout/WorldPanel/World"]
+[node name="HabitatLabel" type="Label" parent="Margin/Layout/WorldPanel/World" unique_id=1622951550]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 16.0
@@ -123,7 +123,7 @@ offset_bottom = 42.0
 theme_override_font_sizes/font_size = 16
 text = "Habitat Access  5%"
 
-[node name="StatusLabel" type="Label" parent="Margin/Layout"]
+[node name="StatusLabel" type="Label" parent="Margin/Layout" unique_id=1326314784]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.72, 0.8, 0.82, 1)
@@ -131,32 +131,32 @@ text = "Improve metabolism until life can sustain replication."
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="Upgrades" type="HBoxContainer" parent="Margin/Layout"]
+[node name="Upgrades" type="HBoxContainer" parent="Margin/Layout" unique_id=209963042]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="MetabolismButton" type="Button" parent="Margin/Layout/Upgrades"]
+[node name="MetabolismButton" type="Button" parent="Margin/Layout/Upgrades" unique_id=298502611]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 82)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "METABOLISM"
 
-[node name="ReplicationButton" type="Button" parent="Margin/Layout/Upgrades"]
+[node name="ReplicationButton" type="Button" parent="Margin/Layout/Upgrades" unique_id=948380821]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 82)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "REPLICATION"
 
-[node name="AdaptationButton" type="Button" parent="Margin/Layout/Upgrades"]
+[node name="AdaptationButton" type="Button" parent="Margin/Layout/Upgrades" unique_id=1487364982]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 82)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "ADAPTATION"
 
-[node name="CooperationButton" type="Button" parent="Margin/Layout"]
+[node name="CooperationButton" type="Button" parent="Margin/Layout" unique_id=1411997931]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
